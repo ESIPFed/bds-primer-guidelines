@@ -40,5 +40,19 @@
   },
   "make_your_data_internet_ready.qmd": {
     "make_your_data_internet_ready.html": "682376c7"
+  },
+  "context_understandability.qmd": {
+    "context_understandability.html": "2c81d0d3",
+    "CONTEXT_UNDERSTANDABILITY.html": "0b426847"
+  },
+  "integrate_data.qmd": {
+    "integrate_data.html": "ad3335f4"
+  },
+  "interoperable_data.qmd": {
+    "interoperable_data.html": "31816aa6",
+    "INTEROPERABLE_DATA.html": "fbac5110"
+  },
+  "software_ready.qmd": {
+    "software_ready.html": "79060e0d"
   }
 }
