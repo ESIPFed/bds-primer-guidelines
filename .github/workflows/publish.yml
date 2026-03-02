@@ -1,7 +1,7 @@
 on:
   workflow_dispatch:
-  push:
-    branches: main
+  #push:
+  #  branches: main
 
 name: Quarto Publish
 
@@ -36,4 +36,5 @@ jobs:
         with:
           target: gh-pages
         env:
+
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
