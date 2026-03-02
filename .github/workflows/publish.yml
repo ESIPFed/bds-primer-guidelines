@@ -11,9 +11,6 @@ jobs:
     
     container:
       image: ghcr.io/sformel/bds-primer-guidelines:latest
-      credentials:
-        username: sformel
-        password: ${{ secrets.GHCR_PAT }}
 
     steps:
       - name: Check out repository
