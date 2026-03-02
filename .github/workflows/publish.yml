@@ -20,8 +20,9 @@ jobs:
 
       - name: Configure Git
         run: |
-          # This line is crucial for containers to prevent 'dubious ownership' errors
-          git config --global --add safe.directory /github/workspace
+          # Use the exact path the error message complained about
+          git config --global --add safe.directory /__w/bds-primer-guidelines/bds-primer-guidelines
+          
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
           git remote set-url origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git
