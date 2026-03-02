@@ -18,6 +18,7 @@ number-depth: 2
 number-offset: 0
   
 execute:
+  freeze: auto
   echo: FALSE
   warning: FALSE
   message: FALSE
