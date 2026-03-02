@@ -11,6 +11,9 @@ jobs:
 
     container:
       image: ghcr.io/sformel/bds-primer-guidelines:latest
+      credentials:
+        username: sformel
+        password: ${{ secrets.GHCR_PAT }}
 
     permissions:
       contents: write
@@ -18,6 +21,14 @@ jobs:
     steps:
       - name: Check out repository
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0 # Fetches all history and branches
+
+      - name: Configure Git
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git remote set-url origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git
 
       - name: Render site
         run: quarto render
