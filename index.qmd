@@ -1,6 +1,6 @@
 # Introduction
 
-*This is still a work in progress and only presented here for the purposes of receiving feedback. This message will be removed when the Primer Guide has been officially published.*
+**This is still a work in progress and only presented here for the purposes of receiving feedback. This message will be removed when the Primer Guide has been officially published.**
 
 In this guide we introduce you to standards and resources for working with biological data. **What do we we mean when we say biological data?**
 
