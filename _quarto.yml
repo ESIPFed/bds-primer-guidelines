@@ -13,6 +13,7 @@ book:
     - interoperable_data.qmd
     - make_your_data_internet_ready.qmd
     - software_ready.qmd
+    - process.qmd
 
 number-depth: 2
 number-offset: 0
