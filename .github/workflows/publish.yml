@@ -1,13 +1,15 @@
 on:
   workflow_dispatch:
-  #push:
-  #  branches: main
+  # push:
+  #   branches: main
 
 name: Quarto Publish
 
 jobs:
   build-deploy:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
 
     container:
       image: ghcr.io/sformel/bds-primer-guidelines:latest
@@ -15,17 +17,16 @@ jobs:
         username: sformel
         password: ${{ secrets.GHCR_PAT }}
 
-    permissions:
-      contents: write
-
     steps:
       - name: Check out repository
         uses: actions/checkout@v4
         with:
-          fetch-depth: 0 # Fetches all history and branches
+          fetch-depth: 0
 
       - name: Configure Git
+        # We need to mark the directory as safe in the container
         run: |
+          git config --global --add safe.directory /__w/${{ github.event.repository.name }}/${{ github.event.repository.name }}
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
           git remote set-url origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git
