@@ -1,0 +1,121 @@
+# Building a Living Document: The Story
+
+## The Problem: Biological Data Standards Are Hard to Navigate
+
+Biological data are messy by nature. They come from acoustic sensors, visual surveys, genetic sequencing, camera traps — and each project tends to organize its data in its own way. Standards exist to help, but for data managers new to the space, the landscape of metadata standards, controlled vocabularies, taxonomic authorities, and web services can feel overwhelming. As one attendee of the 2020 ESIP-IOOS Biological Data Standards Workshop put it: "The diversity of biological data, and seeming lack of overarching community standards makes working with biological data challenging."
+
+The Earth Science Information Partners (ESIP) [Biological Data Standards Cluster](https://wiki.esipfed.org/Biological_Data_Standards_Cluster) was formed in the wake of that workshop to do something about it. The cluster's mandate was broad — guidance, best practices, training, and community building to support standardization and sharing of biological data — but the energy was real. People from USGS, NOAA, OBIS, GBIF, universities [expand this with actual names], and independent organizations showed up because they cared about the problem and wanted to contribute.
+
+This is the story of how that energy was channeled into a product that could grow and improve over time, rather than becoming a static artifact the moment it was published. It is also a recipe — not a step-by-step tutorial (platforms change too fast for that), but a set of principles and design choices that any open science community can adapt.
+
+## Act I: The Primer (2020–2022)
+
+The cluster's first instinct was to build a decision tree — a flowchart that would guide data managers to the right standard for their situation. But biological data proved too heterogeneous for a single tree. As Abby Benson, the cluster's founding chair, described it, the decision tree quickly became a "decision forest."
+
+The cluster pivoted. Instead of a decision tree, they would create an infographic-style primer: a visual, one-page-ish overview of the standards landscape. The [Biological Observation Data Standardization: A Primer for Data Managers](https://doi.org/10.6084/m9.figshare.16806712) was published on Figshare in 2021, designed to be printed at conferences and shared as a quick reference. It covered metadata standards, data standards, taxonomic authorities, habitat classifications, web-enabled standards and services, and some baseline best practices.
+
+The Primer was a success. It filled a real gap, generated strong discussion at ESIP meetings, and won recognition (Benson received the 2022 ESIP Catalyst Award in part for this work). But it was, by design, a snapshot — a static PDF with limited depth. But it didn't tell the user much about how to *implement* the standards it referenced. And the cluster recognized something more than a list of links, but less than a hard-to-maintain deep-dive, was needed.
+
+## Act II: The Guidelines — Designing for Continuous Improvement (2022–Present)
+
+### The Spark
+
+In late 2022, the cluster identified the next step: a companion product that would expand each section of the Primer into actionable guidance. Where the Primer said "use Darwin Core," the Guidelines would explain what Darwin Core is, why you would use it, and how to get started. Where the Primer listed best practices in shorthand, the Guidelines would provide context, examples, and references.
+
+But the cluster's co-chairs made a critical design decision early on. This product would not be another PDF minted once and left to age. It would be a living document, built on infrastructure that made feedback easy to give, contributions easy to track, and updates easy to publish.
+
+The key insight was this: **the process of creating the document was as important as the document itself.** If the process was open, collaborative, and low-friction, then the product could continuously improve. If the process was closed or cumbersome, the product would stagnate regardless of how good its first version was.
+
+### The Butterfly Net: Designing a Mechanism to Capture Contributions
+
+The cluster had enthusiasm in buckets. People from diverse institutions and career stages wanted to contribute their expertise on this subject. The challenge was not motivation — it was mechanism. How do you focus the ideas and energy of a dozen-plus busy professionals, most of whom volunteer their time, into a coherent and evolving product?
+
+The co-chairs designed what might be called a butterfly net: a lightweight system of tools and practices that made it easy for people to contribute in whatever way suited them, while keeping all contributions organized and traceable. The key components were:
+
+**GitHub as the backbone.** The [bds-primer-best-practices](https://github.com/ESIPFed/bds-primer-best-practices) repository became the single source of truth. All content, all feedback, and all decisions lived there. GitHub was chosen not because everyone already knew it, but because it offered the right combination of features: version control, issue tracking, pull requests for review, and free hosting for the rendered site.
+
+**GitHub Issues as the low-barrier entry point.** Anyone could open an issue to suggest a change, flag an error, or propose new content. Issues were labeled and organized using milestones (e.g., "Publication V1.0," "Publication V2.0") so that contributors could see what was being prioritized. The "Give feedback on this page" link in the upper right corner of the rendered Guidelines site directed readers straight to the issue tracker.
+
+**Google Docs as a drafting bridge.** Not everyone was comfortable with GitHub, especially early on. The cluster used Google Docs as a collaborative drafting space where subject matter experts could write and comment in a familiar environment. Co-chairs then transferred polished content to the GitHub repository. This two-track approach met people where they were without sacrificing the benefits of version control.
+
+**Slido polls for collective decision-making.** When the cluster needed to make a choice — what to name the companion product, which section to tackle next, what aesthetic direction to pursue — they used live polls. This gave every attendee an equal voice and created a transparent record of how decisions were made.
+
+**Quarto for rendering, GitHub Pages for hosting.** The Guidelines were written in Quarto (a markdown-based publishing system), rendered to HTML via GitHub Actions, and hosted for free on GitHub Pages at [esipfed.github.io/bds-primer-guidelines](https://esipfed.github.io/bds-primer-guidelines/). This meant that every merged pull request automatically updated the live site — no manual publishing step, no gatekeeping.
+
+**Monthly meetings as the heartbeat.** The cluster met on the first Thursday of every month. These meetings served multiple purposes: community updates, content drafting sessions, invited talks to broaden perspectives, and working sessions to resolve GitHub issues together. The regularity kept momentum even when individual contributors were busy.
+
+**Cross-cluster collaboration sessions.** The cluster didn't work in isolation. A joint "jam session" with the Semantic Harmonization Cluster in May 2024 brought in expertise on controlled vocabularies and ontologies for the "Make Your Data Interoperable" section. Connections to the Marine Data Cluster, Sustainable Data Management Cluster, and Physical Samples Cluster enriched the content and expanded the contributor base.
+
+**Teaching GitHub by doing it.** At the January 2025 ESIP Winter Meeting, the cluster hosted a 90-minute session called "Using GitHub for Collaborative Review of the Biological Data Primer Guidelines." The first half taught participants how to find issues, tag them, assign them, and submit pull requests. The second half put those skills to immediate use: attendees reviewed draft material and submitted real feedback. This turned onboarding into a contribution event.
+
+### Solving the Authorship Problem
+
+Community-authored documents have a persistent social problem: who gets credit? In traditional academic publishing, authorship is negotiated — often awkwardly — and the result is a fixed list that may not reflect everyone's contributions fairly. People who are shy about claiming credit get left off. People who contributed minimally may end up listed. And once the author list is set at publication, there is no mechanism to recognize ongoing contributions.
+
+The cluster developed an elegant solution. In the GitHub repository, each contributor fills out a YAML template describing their own contributions using the [CRediT (Contributor Roles Taxonomy)](https://credit.niso.org/) framework. The template includes clear criteria for what constitutes authorship, so the expectations are transparent and self-service. You don't have to ask to be included — you include yourself by documenting what you did. And if someone claims authorship without meeting the criteria, the record is public and auditable.
+
+A Python script, run via GitHub Actions, then translates the YAML contributor data into two standard citation formats: a Citation File Format (`.cff`) file and a `.zenodo.json` file for Zenodo deposits. This means that every time the Guidelines are published or deposited, the citation metadata is automatically generated from the contributors' self-reported roles — no manual list-building, no forgotten names.
+
+This system solved three problems at once: it lowered the barrier to claiming credit, it established clear and fair criteria, and it automated the translation to standard formats that archives and citation managers understand.
+
+### Intentional Design Choices
+
+Several other design choices are worth highlighting for anyone looking to replicate this approach:
+
+**Sarah Gao's aesthetic review (March 2024).** The cluster invited a USGS product designer to lead a session on visual identity. Attendees compared the aesthetics of sites from the New York Times to Spotify and voted on the impression they wanted the Guidelines to make. This may seem like a luxury for a data standards document, but it reflected a deeper principle: if you want people to use your product, the experience of encountering it matters. Design is a community decision, not an afterthought.
+
+**Structured content with a consistent template.** Each section of the Guidelines follows a common structure: a preamble explaining the purpose, then for each standard or tool: "What is it?", "Why should you use it?", and key resources. This consistency makes it easy for new contributors to add content and for readers to find what they need.
+
+**Versioned releases tied to milestones.** Rather than treating the Guidelines as perpetually unfinished, the cluster uses GitHub milestones to define release targets (V1.0, V2.0). This provides a rhythm of "good enough to share" moments while keeping the door open for continuous improvement. The Guidelines are forkable — anyone can copy the repository and adapt it for their own community.
+
+**The "coalition of the willing" ethos.** This phrase recurs throughout the cluster's history. It captures something important: the work was never mandated by any institution. People contributed because they saw the need and wanted to help. The cluster's role was to create a structure that made those contributions count — not to recruit reluctant participants, but to give willing ones a productive way to engage.
+
+## Principles for Replication
+
+If your community is trying to build a living document collaboratively, here are the principles that made this work:
+
+**1. Use a platform that supports both collaboration and publication.** GitHub (or a similar platform) gives you version control, issue tracking, review workflows, and free hosting in one place. The specific platform matters less than having these capabilities integrated. The rendered site is the public face; the repository is the engine room.
+
+**2. Meet people where they are, then bring them along.** Not everyone will be comfortable with your chosen platform on day one. Provide bridge tools (like Google Docs for drafting) and invest in onboarding (like the Winter 2025 GitHub workshop). The goal is to lower the barrier to contribution, not to gatekeep by technical skill.
+
+**3. Design for feedback, not just publication.** If you want a living document, feedback must be as easy to give as possible. A "Give feedback" link on every page, a well-organized issue tracker, and regular meetings to review feedback together all signal that input is genuinely wanted — not just tolerated.
+
+**4. Automate what you can.** GitHub Actions can build and deploy your site, generate citation files from contributor data, and run validation checks. Every manual step you eliminate is a step that won't become a bottleneck when the original authors move on.
+
+**5. Make authorship self-service and transparent.** Use a framework like CRediT with clear criteria and let contributors declare their own roles. Automate the translation to standard citation formats. This removes social friction, rewards participation, and produces machine-readable metadata.
+
+**6. Build a rhythm.** Monthly meetings, even short ones, maintain momentum and community. Alternate between working sessions (drafting content, resolving issues) and community sessions (invited talks, cross-cluster collaborations, updates from the field).
+
+**7. Capture the energy — don't manufacture it.** The most important ingredient is people who care about the problem. If you have that, your job is to design a mechanism — a butterfly net — that focuses their contributions into something durable. If you don't have that, no amount of process will compensate.
+
+## Where It Stands
+
+As of early 2026, the Biological Data Standards Primer Guidelines are published and actively maintained at [esipfed.github.io/bds-primer-guidelines](https://esipfed.github.io/bds-primer-guidelines/). The cluster continues to meet monthly, with new members joining regularly. The guidelines have been presented at ESIP meetings, recognized with ESIP's Collaboration of the Year Award, and discussed as a model for other clusters to follow. Megan Orlando, then ESIP's Community Director, cited the cluster as an example of "how to cluster" — using a collaborative repository as both a product and a community-building tool.
+
+The leadership of the cluster has itself been a living thing. Abby Benson founded the cluster and led the creation of the Primer. Erin Satterthwaite co-chaired through the early years before transitioning off at the end of 2022. Steve Formel joined USGS and became a driving force behind the Guidelines' architecture and GitHub infrastructure. Tim van der Stap co-chaired through mid-2025 before stepping down. Laura Brenskelle was a consistent presence throughout — leading breakout sessions on ISO metadata at the January 2024 ESIP meeting, demonstrating GitHub feedback workflows, and bridging the cluster's work to the Physical Samples Cluster. Kelsey Huelsman arrived in late 2024 as an ESIP Community Fellow and immediately became a champion of bringing the Guidelines to the finish line, leading the poster presentation at the Summer 2025 ESIP meeting and stepping into a co-chair role after her fellowship ended. Kit Lewers stepped up as co-chair alongside her, bringing connections to TDWG, NEON, GBIF, and iDigBio. Alycia Crall succeeded Megan Orlando as ESIP Community Director and continued to support the cluster's work.
+
+The product is not finished, and that is the point. The next priorities include responding to the rapidly evolving conversation around AI-readiness of biological data, deepening connections with international standards bodies like TDWG and OBIS, and continuing to refine the content based on community feedback. The infrastructure is in place to do all of this without starting over.
+
+## Acknowledgements
+
+This work was possible because people showed up — month after month, often as volunteers — and gave their expertise to a shared cause. The following individuals participated in Biological Data Standards Cluster meetings and activities during the period documented here (November 2022 through February 2026). Their contributions ranged from leading breakout sessions and drafting content to asking the right question at the right time.
+
+**Cluster Leadership:** Abby Benson (founding chair, USGS), Steve Formel (co-chair, USGS / OBIS), Kyla Richards (ESIP Community Fellow, then co-chair; USGS), Tim van der Stap (co-chair, Hakai Institute), Kelsey Huelsman (ESIP Community Fellow, then co-chair; NASA), Kit Lewers (co-chair; CU Boulder / NASA / TDWG / NEON / iDigBio), Erin Satterthwaite (co-chair through 2022, UC San Diego)
+
+**Cluster Participants:** Bolivar Aponte (Data Stewardship Fellow), Meghan Balk (Oslo Natural History Museum / TDWG), Steve Baskauf (Vanderbilt University, invited speaker), Stace Beaulieu (WHOI), Heather Benway (WHOI / METS-RCN), Gary Berg-Cross (Semantic Harmonization Cluster), Mathew Biddle (NOAA / IOOS), Laura Brenskelle, Pier Luigi Buttigieg, Colin Carlson, Chandra Earl (NEON), Lynn deWitt, Ruth Duerr, Sarah Gao (USGS, product design), Kelly Goodwin, Gregory Baillie (NOAA), Kylie Hollis (GBIF-US / OBIS-USA), Kevin Lindstrom, Robert McGuinn (Northern Gulf Institute / NOAA), Hassan Moustahfid, Frank Muller-Karger, Tylar Murray, Margaret O'Brien, Kyla Richards (USGS), Kate Rose (Northern Gulf Institute / NOAA / NCEI), Rachael Blake (Intertidal Agency), Tuomo Saari (GCOOS), Collin Schwantes, Rebecca Scully (USFWS), Daniel Segessenman (ESIP Fellow), Katherine Silliman (NOAA), Eric Sokol (NEON), Gilia Thomas, Sean Tippett, Jess Welch (ORNL / NASA), Jennifer Webster (NOAA), Brian Westra (University of Iowa / Data Curation Network)
+
+**Original Primer Authors (not listed above):** Diana LaScala-Gruenewald (MBARI), Megan McKinzie, Enrique Montes, Anton Van de Putte
+
+**ESIP Staff:** Megan Orlando, Alycia Crall, Jen Bayer
+
+*If your name is missing from this list, please open an issue — the butterfly net is still out.*
+
+## Key Links
+
+- **Primer (static infographic):** [Figshare](https://doi.org/10.6084/m9.figshare.16806712)
+- **Primer Guidelines (living document):** [esipfed.github.io/bds-primer-guidelines](https://esipfed.github.io/bds-primer-guidelines/)
+- **Guidelines GitHub Repository:** [github.com/ESIPFed/bds-primer-best-practices](https://github.com/ESIPFed/bds-primer-best-practices)
+- **Cluster Wiki:** [wiki.esipfed.org/Biological_Data_Standards_Cluster](https://wiki.esipfed.org/Biological_Data_Standards_Cluster)
+- **ESIP Blog Post (2022):** [A Primer for Data Managers](https://www.esipfed.org/guest-blog-a-primer-for-data-managers/)
+- **January 2024 ESIP Meeting Session (video):** [YouTube](https://www.youtube.com/watch?v=BocpE_hN7iA)
+- **Behind the Scenes Poster (Summer 2025):** [Figshare](https://esip.figshare.com/articles/poster/Behind_the_scenes_collaborative_creation_of_the_Biological_Data_Standards_Primer_Guide/29824976)
