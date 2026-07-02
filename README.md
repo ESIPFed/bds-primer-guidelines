@@ -2,7 +2,7 @@
 
 The [ESIP Biological Data Standards Cluster](https://wiki.esipfed.org/Biological_Data_Standards_Cluster) formed in 2020 to maximize data relevance and utility for understanding changes in biodiversity over time. To accomplish this the cluster facilitates guidance, documentation, training, and community building for the US biological data community. The first product from this cluster [Biological Data Standards Primer](https://doi.org/10.6084/m9.figshare.16806712.v2), while an easy to digest resource, does not provide the context data managers need to decide which standards to use for the data they are working with. The guideline documents \[this repo\] are intended to be a bridge between the full, lengthy standards documentation, and the short primer quick reference.
 
-The current draft can be seen as a rendered webpage [here](https://esipfed.github.io/bds-primer-guidelines/). It can be referenced via: https://doi.org/10.5281/zenodo.17781930
+The current draft can be seen as a rendered webpage [here](https://esipfed.github.io/bds-primer-guidelines/). It can be referenced via: [https://doi.org/10.5281/zenodo.17781930](https://doi.org/10.5281/zenodo.17526612)
 
 ## Why
 
