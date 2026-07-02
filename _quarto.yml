@@ -42,7 +42,7 @@ format:
    toc: true  
    toc-location: left  
    toc-title: ""  
-   
+      
 #  pdf: default
 #  docx: 
     # toc: false  # This isn't populating for some reason
