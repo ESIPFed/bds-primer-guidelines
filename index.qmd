@@ -40,12 +40,12 @@ The [ESIP Biological Data Standards Cluster](https://wiki.esipfed.org/Biological
 
 If you would like to suggest changes or additions to the guide, please use [GitHub issues](https://github.com/ESIPFed/bds-primer-best-practices/issues/new/choose) to document your request.
 
-## Cite this Document
-
-ESIP Biological Data Standards Cluster, Formel, S., Huelsman, K., Brenskelle, L., & Stap, T. van . der . (2025). ESIP Biological Data Standards (BDS) Cluster: Primer Guidelines (v0.99.1). Zenodo. https://doi.org/10.5281/zenodo.17526612
-
 #### Translations
 Currently, we have the capacity to offer this guide only in English. However, users can get a rough translation using [Google Translate](https://translate.google.com/?sl=en&tl=es&op=websites). Just drop the page's url in this service.
+
+### Cite this Document
+
+ESIP Biological Data Standards Cluster, Formel, S., Huelsman, K., Brenskelle, L., & Stap, T. van . der . (2025). ESIP Biological Data Standards (BDS) Cluster: Primer Guidelines (v0.99.1). Zenodo. [https://doi.org/10.5281/zenodo.17526612](https://doi.org/10.5281/zenodo.17526612)
 
 
 
