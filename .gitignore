@@ -6,4 +6,9 @@ rsconnect
 .Rproj.user
 .Rproj.user/
 
+# Quarto build artifacts
 /.quarto/
+/docs/
+
+.DS_Store
+
