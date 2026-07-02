@@ -1,7 +1,5 @@
 # Introduction
 
-**This is still a work in progress and only presented here for the purposes of receiving feedback. This message will be removed when the Primer Guide has been officially published.**
-
 In this guide we introduce you to standards and resources for working with biological data. **What do we we mean when we say biological data?**
 
 > Biological data is any information that tells us something about living things—what they are, where they are, how many there are, or how they are functioning. It can come from direct observations (like counting birds or collecting plant samples), from measurements of their traits (like DNA sequences or chemical markers in tissues), or from indirect signals that reflect biological activity (like acoustic recordings of animal calls, pigments that reveal plankton growth, or satellite images showing vegetation health). We choose to focus on biological data that are relevant to understanding our planet and its ecosystems. The data from fields like biomedical, social, and economic sciences may overlap with what we discuss here, but those areas are beyond the scope of this guide.
@@ -41,6 +39,10 @@ The [ESIP Biological Data Standards Cluster](https://wiki.esipfed.org/Biological
 ### How to contribute to this Primer Guide
 
 If you would like to suggest changes or additions to the guide, please use [GitHub issues](https://github.com/ESIPFed/bds-primer-best-practices/issues/new/choose) to document your request.
+
+## Cite this Document
+
+ESIP Biological Data Standards Cluster, Formel, S., Huelsman, K., Brenskelle, L., & Stap, T. van . der . (2025). ESIP Biological Data Standards (BDS) Cluster: Primer Guidelines (v0.99.1). Zenodo. https://doi.org/10.5281/zenodo.17526612
 
 #### Translations
 Currently, we have the capacity to offer this guide only in English. However, users can get a rough translation using [Google Translate](https://translate.google.com/?sl=en&tl=es&op=websites). Just drop the page's url in this service.
