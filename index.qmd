@@ -45,4 +45,4 @@ Currently, we have the capacity to offer this guide only in English. However, us
 
 ### Cite this Document
 
-ESIP Biological Data Standards Cluster, Formel, S., Huelsman, K., Brenskelle, L., & Stap, T. van . der . (2025). ESIP Biological Data Standards (BDS) Cluster: Primer Guidelines (v0.99.1). Zenodo. [https://doi.org/10.5281/zenodo.17526612](https://doi.org/10.5281/zenodo.17526612)
+ESIP Biological Data Standards Cluster, Formel, S., Huelsman, K., Brenskelle, L., & Stap, T. van . der . (2025). ESIP Biological Data Standards (BDS) Cluster: Primer Guidelines (v1.0.0). Zenodo. [https://doi.org/10.5281/zenodo.17526612](https://doi.org/10.5281/zenodo.17526612)
